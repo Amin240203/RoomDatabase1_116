@@ -24,6 +24,7 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.input.nestedscroll.nestedScroll
@@ -37,7 +38,7 @@ import com.example.roomdatabase.R
 import com.example.roomdatabase.room.Siswa
 import com.example.roomdatabase.uicontroller.DestinasiNavigasi
 import com.example.roomdatabase.viewmodel.HomeViewModel
-import com.example.roomdatabase.viewmodel.PenyediaVIewModel
+import com.example.roomdatabase.viewmodel.PenyediaViewModel
 
 object DestinasiHome : DestinasiNavigasi{
     override val route = "home"
@@ -52,7 +53,7 @@ fun HomeScreen(
 
     modifier: Modifier = Modifier,
 
-    viewModel: HomeViewModel = viewModel(factory = PenyediaVIewModel.Factory)
+    viewModel: HomeViewModel = viewModel(factory = PenyediaViewModel .Factory)
 ){
     val scrollBehavior = TopAppBarDefaults.enterAlwaysScrollBehavior()
     Scaffold (
