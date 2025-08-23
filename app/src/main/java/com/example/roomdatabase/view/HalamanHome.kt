@@ -28,14 +28,14 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.input.nestedscroll.nestedScroll
-import androidx.compose.ui.layout.HorizontalAlignmentLine
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.roomdatabase.R
 import com.example.roomdatabase.room.Siswa
+import com.example.roomdatabase.uicontroller.SiswaTopAppBar
 import com.example.roomdatabase.uicontroller.DestinasiNavigasi
 import com.example.roomdatabase.viewmodel.HomeViewModel
 import com.example.roomdatabase.viewmodel.PenyediaViewModel
@@ -60,8 +60,8 @@ fun HomeScreen(
         modifier = modifier.nestedScroll(scrollBehavior.nestedScrollConnection),
         topBar = {
             SiswaTopAppBar(
-                tittle = stringResource(DestinasiHome.titleRes),
-                canNaviagteBack = false,
+                title = stringResource(DestinasiHome.titleRes),
+                canNavigateBack = false,
                 scrollBehavior = scrollBehavior
             )
         },
